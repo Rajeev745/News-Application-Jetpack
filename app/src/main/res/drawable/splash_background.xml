@@ -9,7 +9,7 @@
 
     <item android:height="100dp"
         android:width="100dp"
-        android:drawable="@drawable/ic_news_launcher"
+        android:drawable="@drawable/splash_icon"
         android:gravity="center"/>
 
 </layer-list>
