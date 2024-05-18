@@ -17,6 +17,26 @@ import com.example.insightfeed.presentation.Dimens.smallPadding
 @Composable
 fun ArticlesList(
     modifier: Modifier = Modifier,
+    articles: List<ArticlesModel>,
+    onClick: (ArticlesModel) -> Unit
+) {
+
+
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(paddingMedium1),
+        contentPadding = PaddingValues(all = smallPadding)
+    ) {
+        items(count = articles.size) {
+            val article = articles[it]
+            ArticlesCard(articlesModel = article, onClick = { onClick(article) })
+        }
+    }
+}
+
+@Composable
+fun ArticlesList(
+    modifier: Modifier = Modifier,
     articles: LazyPagingItems<ArticlesModel>,
     onClick: (ArticlesModel) -> Unit
 ) {
@@ -25,7 +45,7 @@ fun ArticlesList(
 
     if (handlePagingResult) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(paddingMedium1),
             contentPadding = PaddingValues(all = smallPadding)
         ) {

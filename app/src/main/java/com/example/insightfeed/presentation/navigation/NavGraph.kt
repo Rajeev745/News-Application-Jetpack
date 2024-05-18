@@ -7,6 +7,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.example.insightfeed.presentation.bookmark.BookMarkScreen
+import com.example.insightfeed.presentation.bookmark.BookMarkState
+import com.example.insightfeed.presentation.bookmark.BookMarkViewModel
 import com.example.insightfeed.presentation.home.HomeScreen
 import com.example.insightfeed.presentation.home.NewsHomeViewModel
 import com.example.insightfeed.presentation.onboarding.OnBoardingScreen
