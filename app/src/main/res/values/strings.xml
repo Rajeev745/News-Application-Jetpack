@@ -8,4 +8,5 @@
     <string name="news_intro_onboarding_description">Explore how impactful images shape news narratives, influence perspectives, and enhance storytelling, offering a glimpse into the power of visual journalism</string>
     <string name="news_navigate_onboarding_description">Delve into the complexities of global news consumption, highlighting the importance of diverse sources and perspectives in fostering a well-rounded understanding of world events.</string>
     <string name="news_revolution_onboarding_description">Discover how technological advancements and changing media landscapes are revolutionizing the way news is produced, consumed, and shared, reshaping the future of information dissemination.</string>
+    <string name="articles_image_desc">Articles Image</string>
 </resources>

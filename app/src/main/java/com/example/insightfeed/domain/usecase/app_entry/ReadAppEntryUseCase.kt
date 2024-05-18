@@ -1,4 +1,4 @@
-package com.example.insightfeed.domain.usecase
+package com.example.insightfeed.domain.usecase.app_entry
 
 import com.example.insightfeed.domain.manager.LocalUserManagerRepository
 import kotlinx.coroutines.flow.Flow
