@@ -13,10 +13,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.insightfeed.data.local.NewsDao
+import com.example.insightfeed.domain.model.news.ArticlesModel
+import com.example.insightfeed.domain.model.news.SourceModel
 import com.example.insightfeed.presentation.navigation.NavGraph
 import com.example.insightfeed.ui.theme.InsightFeedTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -30,6 +36,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
         setContent {
             InsightFeedTheme(dynamicColor = false) {
 

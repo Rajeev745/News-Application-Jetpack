@@ -27,7 +27,7 @@ class NewsResponseMapper {
             author = dto.author,
             title = dto.title,
             description = dto.description,
-            url = dto.url,
+            url = dto.url ?: "",
             urlToImage = dto.urlToImage,
             content = dto.content
         )
