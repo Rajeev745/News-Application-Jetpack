@@ -12,6 +12,7 @@ import com.example.insightfeed.presentation.bookmark.BookMarkState
 import com.example.insightfeed.presentation.bookmark.BookMarkViewModel
 import com.example.insightfeed.presentation.home.HomeScreen
 import com.example.insightfeed.presentation.home.NewsHomeViewModel
+import com.example.insightfeed.presentation.news_navigation.NewsNavigator
 import com.example.insightfeed.presentation.onboarding.OnBoardingScreen
 import com.example.insightfeed.presentation.onboarding.viewmodel.OnBoardingViewModel
 import com.example.insightfeed.presentation.search.SearchScreen
@@ -40,9 +41,7 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ) {
             composable(route = Route.NewsNavigatorScreen.route) {
-                val homeViewModel: NewsHomeViewModel = hiltViewModel()
-                val articlesModel = homeViewModel.news.collectAsLazyPagingItems()
-                HomeScreen(articlesModel = articlesModel, navigate = {})
+                NewsNavigator()
             }
         }
     }

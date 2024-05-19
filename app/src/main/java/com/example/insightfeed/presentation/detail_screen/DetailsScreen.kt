@@ -30,7 +30,6 @@ import com.example.insightfeed.utils.UIComponent
 fun DetailsScreen(
     articlesModel: ArticlesModel,
     event: (DetailEvent) -> Unit,
-    sideEffect: UIComponent?,
     navigateUp: () -> Unit
 ) {
 
