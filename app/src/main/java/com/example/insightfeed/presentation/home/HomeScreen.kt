@@ -28,12 +28,11 @@ import com.example.insightfeed.presentation.Dimens
 import com.example.insightfeed.presentation.Dimens.headingSize
 import com.example.insightfeed.presentation.common.ArticlesList
 import com.example.insightfeed.presentation.common.SearchBar
-import com.example.insightfeed.presentation.navigation.Route
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
-    articlesModel: LazyPagingItems<ArticlesModel>, navigate: (String) -> Unit
+    articlesModel: LazyPagingItems<ArticlesModel>, navigateToDetail: (ArticlesModel) -> Unit
 ) {
 
     val titles by remember {
@@ -73,7 +72,7 @@ fun HomeScreen(
             onValueChange = {},
             onSearch = {},
             onClick = {
-                navigate(Route.SearchScreen.route)
+                navigateToDetail
             })
 
         Spacer(modifier = Modifier.height(Dimens.paddingMedium1))
@@ -90,10 +89,10 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(Dimens.paddingMedium1))
 
-        ArticlesList(articles = articlesModel,
+        ArticlesList(
+            articles = articlesModel,
             modifier = Modifier.padding(horizontal = Dimens.paddingMedium1),
-            onClick = {
-                // TODO: Navigate to detail screen
-            })
+            onClick = navigateToDetail
+        )
     }
 }

@@ -12,3 +12,8 @@ object Constants {
 
     const val NEWS_DATABASE = "news_database"
 }
+
+object ArgumentKeys {
+
+    const val ARTICLE = "article"
+}

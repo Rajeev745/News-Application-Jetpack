@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -141,9 +142,7 @@ dependencies {
     implementation "io.coil-kt:coil-compose:2.2.2"
 
     implementation "androidx.paging:paging-compose:1.0.0-alpha10"
-
     implementation 'com.localebro:okhttpprofiler:1.0.8'
-
 }
 
 // Allow references to generated code
